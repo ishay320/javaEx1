@@ -251,8 +251,6 @@ public class WGraph_Algo implements weighted_graph_algorithms {
      */
     @Override
     public boolean load(String file) {
-
-
         try
         {
             // Reading the object from a file
@@ -270,4 +268,6 @@ public class WGraph_Algo implements weighted_graph_algorithms {
         }
         return true;
     }
+
+
 }

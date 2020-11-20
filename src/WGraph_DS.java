@@ -3,6 +3,7 @@ package ex1.src;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.LinkedList;
+import java.util.Objects;
 
 
 public class WGraph_DS implements weighted_graph {
@@ -304,5 +305,26 @@ public class WGraph_DS implements weighted_graph {
         if(!_nodeset.containsKey(key))return false;
         getNode(key).setInfo(info);
         return true;
+    }
+
+    /**
+     * @param o
+     * @return true if equals
+     */
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof WGraph_DS)) return false;
+        WGraph_DS wGraph_ds = (WGraph_DS) o;
+        boolean t =_edges == wGraph_ds.edgeSize() &&
+                ModeCount == wGraph_ds.getMC() &&
+                nodeSize()==wGraph_ds.nodeSize();
+        int[] keyArr = toKeyArray();
+        for (int i = 0; i < keyArr.length-1; i++) {
+            if (getEdge(keyArr[i],keyArr[i+1])!=wGraph_ds.getEdge(keyArr[i],keyArr[i+1])){
+                t=false;
+            }
+        }
+        return  t;
     }
 }

@@ -22,7 +22,8 @@ the commands are:
 *  edgeSize() -returns the number of edges that the graph contain  
 *  getMC() -return the number of modification that the graph undergo  
 *  toKeyArray() -makes int array of the keys  
-*  setInfo(int key, String info) -set the info of the node  
+*  setInfo(int key, String info) -set the info of the node
+*  equals(object o)- checks if equals  
 ****  
 * WGraph_Algo() -makes a container for the graph for running algorithm  
 *  init(weighted_graph g) -here you put the graph to operate on  
